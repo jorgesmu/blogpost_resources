@@ -2,10 +2,9 @@
 from bokeh.plotting import figure, output_file, show
 
 # prepare some data
-x = [i for i in range(10000)]
+x = [i for i in range(1000)]
 y0 = [i**2 for i in x]
 y1 = [(i*(i+1)/2) for i in x]
-y2 = [(3*i) for i in x]
 
 # output to static HTML file
 output_file("log_lines.html")
@@ -16,9 +15,7 @@ p = figure(
 )
 
 # add some renderers
-p.line(x, y0, legend="Y = N^2", line_color="red")
-p.line(x, y1, legend="Y = N(N+1)/2", line_color="orange")
-p.line(x, y2, legend="Y = 3N", line_color="green")
-
+p.line(x, y0, legend="y=N^2", line_color="red")
+p.line(x, y1, legend="y=N(N+1)/2")
 # show the results
 show(p)
