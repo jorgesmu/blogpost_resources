@@ -15,7 +15,7 @@ p = figure(
 )
 
 # add some renderers
-p.line(x, y0, legend="y=N^2", line_color="red")
-p.line(x, y1, legend="y=3N")
+p.line(x, y0, legend="Y = N^2", line_color="red")
+p.line(x, y1, legend="Y = 3N")
 # show the results
 show(p)
