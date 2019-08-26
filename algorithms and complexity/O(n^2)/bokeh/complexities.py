@@ -6,10 +6,7 @@ x = [i for i in range(100000)]
 y0 = [i**2 for i in x]
 y1 = [(i*(i+1)/2) for i in x]
 y2 = [(2000*i) for i in x]
-y3 = [(3*i) for i in x]
-
-# output to static HTML file
-output_file("log_lines.html")
+y3 = [(2*i) for i in x]
 
 # create a new plot
 p = figure(
@@ -20,7 +17,7 @@ p = figure(
 p.line(x, y0, legend="Y = N^2", line_color="red")
 p.line(x, y1, legend="Y = N(N+1)/2", line_color="orange")
 p.line(x, y2, legend="Y = 2000N", line_color="blue")
-p.line(x, y3, legend="Y = 3N", line_color="green")
+p.line(x, y3, legend="Y = 2N", line_color="green")
 
 # show the results
 show(p)

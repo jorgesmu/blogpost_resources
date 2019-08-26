@@ -2,12 +2,9 @@
 from bokeh.plotting import figure, output_file, show
 
 # prepare some data
-x = [i for i in range(20000)]
+x = [i for i in range(500)]
 y0 = [i**2 for i in x]
-y1 = [(2000*i) for i in x]
-
-# output to static HTML file
-output_file("log_lines.html")
+y1 = [(2*i) for i in x]
 
 # create a new plot
 p = figure(
@@ -16,6 +13,6 @@ p = figure(
 
 # add some renderers
 p.line(x, y0, legend="Y = N^2", line_color="red")
-p.line(x, y1, legend="Y = 2000N")
+p.line(x, y1, legend="Y = 2N")
 # show the results
 show(p)
